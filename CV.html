@@ -1,0 +1,224 @@
+<!-- Advanced CV Website -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Muaz Ibne Omar — CV / Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Same styles as before, omitted for brevity */
+    :root{
+      --bg:#111827;
+      --card:#1f2937;
+      --accent:#22c55e;
+      --text:#f9fafb;
+      --muted:#9ca3af;
+      font-family: 'Poppins', sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);}
+    .container{max-width:1100px;margin:40px auto;padding:20px;display:grid;grid-template-columns:330px 1fr;gap:20px}
+    .profile{background:var(--card);border-radius:16px;padding:24px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.5);position:relative;overflow:hidden}
+    .profile::before{content:'';position:absolute;top:-40%;left:-40%;width:200%;height:200%;background:linear-gradient(135deg,var(--accent),#3b82f6);clip-path:circle(35% at center);opacity:.2;animation:spin 20s linear infinite}
+    @keyframes spin{100%{transform:rotate(360deg)}}
+    .avatar{width:150px;height:150px;border-radius:16px;margin:auto;overflow:hidden;border:4px solid var(--accent)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1.name{margin-top:14px;font-size:24px;font-weight:700}
+    .role{color:var(--muted);margin-top:4px;font-size:14px}
+    .links{margin-top:14px;display:flex;justify-content:center;gap:12px}
+    .links a{color:var(--accent);text-decoration:none;font-size:18px;transition:.3s}
+    .links a:hover{transform:scale(1.2)}
+    .buttons{margin-top:18px;display:flex;justify-content:space-between}
+    .btn{flex:1;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;margin:4px;text-decoration:none;font-size:14px;transition:.3s}
+    .btn:hover{background:#16a34a}
+    .content{display:flex;flex-direction:column;gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.3);animation:fadeIn 1s ease-in}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}
+    }
+    .section-title{font-size:18px;font-weight:600;margin-bottom:12px;color:var(--accent)}
+    p{color:var(--muted);line-height:1.6}
+    ul{margin-left:18px;color:var(--muted)}
+    li{margin-bottom:6px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+    .interest{background:#111827;border:1px solid rgba(255,255,255,0.05);padding:16px;border-radius:12px;text-align:center;transition:.3s;cursor:pointer;}
+    .interest:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(0,0,0,.5)}
+    .interest h3{margin-top:8px;font-size:15px;color:#fff}
+    .interest p{font-size:13px}
+    .skill-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .skill{margin-bottom:10px}
+    .skill-name{font-size:14px;margin-bottom:4px}
+    .skill-bar{background:#222;height:8px;border-radius:4px;overflow:hidden}
+    .skill-level{background:var(--accent);height:8px;border-radius:4px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .project-card{background:#191f2b;border-radius:10px;padding:16px;text-align:center;transition:.3s}
+    .project-card:hover{box-shadow:0 5px 15px #0005;transform:translateY(-5px);}
+    .project-title{color:var(--accent);font-weight:600;font-size:15px}
+    .form-group{margin-bottom:12px}
+    input,textarea{width:100%;background:#191f2b;border:1px solid #333;color:#fff;padding:10px;border-radius:6px;font-size:14px;}
+    input:focus,textarea:focus{outline:2px solid var(--accent);}
+    .submit-btn{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:8px;font-size:15px;cursor:pointer;transition:.3s;}
+    .submit-btn:hover{background:#16a34a}
+    .modal{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;z-index:1000;}
+    .modal-content{background:var(--card);padding:32px;border-radius:18px;max-width:400px}
+    .close-modal{float:right;font-size:20px;cursor:pointer;color:var(--accent)}
+    @media(max-width:900px){
+      .container{grid-template-columns:1fr}
+      .profile{margin-bottom:20px;}
+    }
+    footer{text-align:center;margin-top:30px;font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Profile Section -->
+    <div class="profile">
+      <div class="avatar">
+        <img src="WhatsApp Image 2025-03-29 at 22.44.04_88d8574a.jpg" alt="Muaz Ibne Omar">
+      </div>
+      <h1 class="name">Muaz Ibne Omar</h1>
+      <div class="role">AI/ML Researcher</div>
+      <div class="links">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">🔗</a>
+        <a href="https://github.com/Zumar43" target="_blank" title="GitHub">💻</a>
+        <a href="zumar43@email.com" title="Email">📧</a>
+        <a href="https://scholar.google.com/citations?user=yourid" target="_blank" title="Google Scholar">🌐</a>
+      </div>
+      <div class="buttons">
+        <a href="Muaz_Ibne_Omar_CV.pdf" class="btn" download>Download CV</a>
+        <a href="#contact" class="btn" style="background:#3b82f6">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Right Content Section -->
+    <div class="content">
+      <!-- Same as previous code, omitted for brevity -->
+      <!-- About Me, Skills, Projects, Research Interests, Contact Me -->
+      <!-- ... (see previous code) ... -->
+      <div class="card">
+        <h2 class="section-title">About Me</h2>
+        <p>Assalamualaikum. I am Muaz Ibne Omar, a Lecturer of CSE at University. I specialize in Question Based Learning (QBL) which helps students and educators make classroom activities more interactive. My research interest is Machine Learning/Deep Learning across various domains.</p>
+        <ul>
+          <li><strong>Age:</strong> 27</li>
+          <li><strong>Address:</strong> Dhaka, Bangladesh</li>
+          <li><strong>Highest Degree:</strong> Masters in Science (CSE)</li>
+          <li><strong>Concentration:</strong> AI/ML/DL</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-list">
+          <div class="skill">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 100%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">TensorFlow/Keras</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">NLP</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Deep Learning</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Public Speaking</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 77%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Data Analysis</div>
+            <div class="skill-bar"><div class="skill-level" style="width: 84%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-title">StudentQBL</div>
+            <p>AI-powered Question Based Learning system for tertiary education.</p>
+            <a href="https://github.com/yourusername/studentqbl" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-card">
+            <div class="project-title">BanglaNLP</div>
+            <p>Natural Language Processing toolkit for Bangla.</p>
+            <a href="https://github.com/yourusername/banglanlp" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-card">
+            <div class="project-title">EduVision</div>
+            <p>Visual recognition for smart classroom apps.</p>
+            <a href="https://github.com/yourusername/eduvision" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="grid-3">
+          <div class="interest" onclick="openModal('AI')">
+            <div style="font-size:30px">🤖</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Focus on Machine Learning and Deep Learning in real-world applications.</p>
+          </div>
+          <div class="interest" onclick="openModal('TED')">
+            <div style="font-size:30px">📘</div>
+            <h3>Tertiary Education Development</h3>
+            <p>Improving education in Bangladesh through QBL approach.</p>
+          </div>
+          <div class="interest" onclick="openModal('DL')">
+            <div style="font-size:30px">🧠</div>
+            <h3>Deep Learning</h3>
+            <p>Exploring neural networks, NLP, and computer vision solutions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <div class="form-group"><input name="name" type="text" placeholder="Your Name" required></div>
+          <div class="form-group"><input name="email" type="email" placeholder="Your Email" required></div>
+          <div class="form-group"><textarea name="message" placeholder="Message" required></textarea></div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div id="modal-text"></div>
+    </div>
+  </div>
+  <footer>Designed with ❤️ — Replace the text and image with your own details.</footer>
+  <script>
+    // Modal details
+    function openModal(topic){
+      document.getElementById('modal').style.display = 'flex';
+      let text = "";
+      if(topic === "AI"){
+        text = "<h3>Artificial Intelligence</h3><p>Research includes neural networks, ML algorithms, and their applications in healthcare, education, and more. <br><a href='https://scholar.google.com/citations?user=yourid' target='_blank'>See publications</a></p>";
+      } else if(topic === "TED"){
+        text = "<h3>Tertiary Education Development</h3><p>Focused on curriculum design, interactive learning methods (QBL), and digital transformation in Bangladesh universities.</p>";
+      } else if(topic === "DL"){
+        text = "<h3>Deep Learning</h3><p>NLP, computer vision, and generative modeling.<br><a href='https://github.com/yourusername/banglanlp' target='_blank'>See project</a></p>";
+      }
+      document.getElementById('modal-text').innerHTML = text;
+    }
+    function closeModal(){
+      document.getElementById('modal').style.display = 'none';
+    }
+    window.onclick = function(event){
+      var modal = document.getElementById('modal');
+      if(event.target === modal){
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
